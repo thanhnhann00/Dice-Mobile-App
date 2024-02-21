@@ -33,12 +33,13 @@ public class LoginActivity extends AppCompatActivity {
                 String username = editTextUsername.getText().toString();
                 String password = editTextPassword.getText().toString();
 
-                // Implement authentication logic here
+                //TODO: Implement authentication logic here
                 if (username.equals("Admin") && password.equals("123")) {
                     // Successful login
-                    Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
-                    Intent loginIntent = new Intent(LoginActivity.this, LoginActivity.class);
-                    startActivity(loginIntent);
+                    //Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+                    Intent diceIntent = new Intent(LoginActivity.this, DiceActivity.class);
+                    startActivity(diceIntent);
+                    finish();  // Close the current activity
                 } else {
                     // Failed login
                     Toast.makeText(LoginActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();

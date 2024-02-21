@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class GameActivity extends AppCompatActivity {
+public class DiceActivity extends AppCompatActivity {
     // Store the Thread sleep time in an integer variable
     int delayTime = 20;
     // Store the number of Dice roll animations per execution
@@ -33,7 +33,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.game);
+        setContentView(R.layout.activity_dice);
         // From the onCreate() method, find the Views
         tvHelp = findViewById(R.id.tvHelp);
         diceContainer = findViewById(R.id.diceContainer);
@@ -61,7 +61,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate back to the main page (MainActivity)
-                Intent intent = new Intent(GameActivity.this, MainActivity.class);
+                Intent intent = new Intent(DiceActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();  // Close the current activity
             }
