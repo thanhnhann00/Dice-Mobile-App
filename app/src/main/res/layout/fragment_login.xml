@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -7,14 +7,14 @@
     android:background="#20FF8C"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="0dp">
 
     <ImageButton
         android:id="@+id/button_previous"
         android:background="@android:color/transparent"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginLeft="300dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="360dp"
         android:importantForAccessibility="no"
         android:scaleType="centerInside"
         android:src="@drawable/go_back"
@@ -23,15 +23,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/abril_fatface"
-        android:text="Dice Roller"
-        android:textAlignment="center"
-        android:textSize="40sp" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/dice_roller_logo" />
 
     <EditText
         android:id="@+id/editTextUsername"
@@ -58,6 +54,8 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         style="@style/BlackButton"/>
 
     <FrameLayout
@@ -71,7 +69,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="459dp"
+            android:layout_height="300dp"
             app:srcCompat="@drawable/pngimg_com___dice_png41" />
     </FrameLayout>
 </LinearLayout>

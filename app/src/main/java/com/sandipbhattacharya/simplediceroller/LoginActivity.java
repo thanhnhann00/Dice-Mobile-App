@@ -3,6 +3,7 @@ package com.sandipbhattacharya.simplediceroller;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,46 +16,50 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText editTextUsername, editTextPassword;
 
+    private static final String TAG = LoginActivity.class.getSimpleName();
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_login);
+        Log.d(TAG, "onCreate LoginActivity");
 
-        // Initialize UI elements
+        //Initialize UI elements
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
         Button buttonLogin = findViewById(R.id.buttonLogin);
         buttonLogin.setBackgroundColor(Color.parseColor("#010b13"));
 
-        // Set a click listener for the login button
+        //Set a click listener for the login button
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Retrieve entered username and password
+                //Retrieve entered username and password
                 String username = editTextUsername.getText().toString();
                 String password = editTextPassword.getText().toString();
 
-                // Implement authentication logic here
+                //Simple authentication logic
                 if (username.equals("Admin") && password.equals("123")) {
-                    // Successful login
+                    //Successful login
                     Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
                     Intent loginIntent = new Intent(LoginActivity.this, LoginActivity.class);
                     startActivity(loginIntent);
                 } else {
-                    // Failed login
+                    //Failed login
                     Toast.makeText(LoginActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        // Previous button click listener
+        //Previous button click listener
         ImageButton buttonPrevious = findViewById(R.id.button_previous);
         buttonPrevious.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Navigate back to the main page (MainActivity)
+                //Navigate back to the main page (MainActivity)
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish();  // Close the current activity
+                //Close the current activity
+                finish();
             }
         });
     }

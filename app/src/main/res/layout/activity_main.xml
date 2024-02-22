@@ -7,19 +7,14 @@
     android:background="#20FF8C"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="0dp">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/abril_fatface"
-        android:text="Dice Roller"
-        android:textAlignment="center"
-        android:textSize="40sp" />
-
-    <!-- FrameLayout should be at the bottom of the LinearLayout -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/dice_roller_logo" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonLogin"
@@ -27,6 +22,8 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:layout_marginTop="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         style="@style/BlackButton"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -35,6 +32,8 @@
         android:layout_height="wrap_content"
         android:text="Create an account"
         android:layout_marginTop="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         style="@style/BlackButton"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -43,6 +42,8 @@
         android:layout_height="wrap_content"
         android:text="QuickPlay"
         android:layout_marginTop="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         style="@style/BlackButton"/>
 
     <FrameLayout
@@ -56,7 +57,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="459dp"
+            android:layout_height="300dp"
             app:srcCompat="@drawable/pngimg_com___dice_png41" />
     </FrameLayout>
 </LinearLayout>

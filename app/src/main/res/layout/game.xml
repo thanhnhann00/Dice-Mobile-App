@@ -13,9 +13,9 @@
     <ImageButton
         android:id="@+id/button_previous"
         android:background="@android:color/transparent"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginLeft="300dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="340dp"
         android:importantForAccessibility="no"
         android:scaleType="centerInside"
         android:src="@drawable/go_back"

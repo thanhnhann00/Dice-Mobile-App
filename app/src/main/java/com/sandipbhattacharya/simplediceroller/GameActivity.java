@@ -2,7 +2,9 @@ package com.sandipbhattacharya.simplediceroller;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -30,10 +32,14 @@ public class GameActivity extends AppCompatActivity {
     // Declare a MediaPlayer object reference
     MediaPlayer mp;
 
+    private static final String TAG = GameActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
+
+        Log.d(TAG, "onCreate GameActivity");
         // From the onCreate() method, find the Views
         tvHelp = findViewById(R.id.tvHelp);
         diceContainer = findViewById(R.id.diceContainer);

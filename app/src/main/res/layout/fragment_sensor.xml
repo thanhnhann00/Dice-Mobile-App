@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#20FF8C">
+
+    <TextView
+        android:text="Linear Accelerator Sensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:paddingEnd="8dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginTop="40dp">
+
+        <!-- Table Row 1 -->
+        <TableRow>
+            <TextView
+                android:text="X-Axis:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/table_cell_border"/>
+
+            <TextView
+                android:id="@+id/textViewX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:background="@drawable/table_cell_border"/>
+        </TableRow>
+
+        <!-- Table Row 2 -->
+        <TableRow>
+            <TextView
+                android:text="Y-Axis:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="8dp"
+                android:textSize="24sp"
+                android:background="@drawable/table_cell_border"/>
+
+            <TextView
+                android:id="@+id/textViewY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:background="@drawable/table_cell_border"/>
+        </TableRow>
+
+        <!-- Table Row 3 -->
+        <TableRow>
+            <TextView
+                android:text="Z-Axis:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="8dp"
+                android:textSize="24sp"
+                android:background="@drawable/table_cell_border"/>
+
+            <TextView
+                android:id="@+id/textViewZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:background="@drawable/table_cell_border"/>
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
