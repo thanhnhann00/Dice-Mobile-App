@@ -2,9 +2,7 @@ package com.sandipbhattacharya.simplediceroller;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -15,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class GameActivity extends AppCompatActivity {
+public class DiceActivity extends AppCompatActivity {
     // Store the Thread sleep time in an integer variable
     int delayTime = 20;
     // Store the number of Dice roll animations per execution
@@ -32,14 +30,10 @@ public class GameActivity extends AppCompatActivity {
     // Declare a MediaPlayer object reference
     MediaPlayer mp;
 
-    private static final String TAG = GameActivity.class.getSimpleName();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.game);
-
-        Log.d(TAG, "onCreate GameActivity");
+        setContentView(R.layout.activity_dice);
         // From the onCreate() method, find the Views
         tvHelp = findViewById(R.id.tvHelp);
         diceContainer = findViewById(R.id.diceContainer);
@@ -67,7 +61,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate back to the main page (MainActivity)
-                Intent intent = new Intent(GameActivity.this, MainActivity.class);
+                Intent intent = new Intent(DiceActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();  // Close the current activity
             }

@@ -5,17 +5,17 @@
     android:id="@+id/diceContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/rolling_dice_background"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".GameActivity">
+    tools:context=".DiceActivity">
 
     <ImageButton
         android:id="@+id/button_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="76dp"
+        android:layout_marginLeft="300dp"
         android:background="@android:color/transparent"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="340dp"
         android:importantForAccessibility="no"
         android:scaleType="centerInside"
         android:src="@drawable/go_back"
@@ -35,8 +35,8 @@
         android:gravity="center"
         android:padding="5dp"
         android:text="Touch on the screen to start rolling."
-        android:textColor="#fff"
-        android:textSize="18sp" />
+        android:textColor="#111"
+        android:textSize="24sp" />
     <!-- Add a LinearLayout to display two vertically aligned die images -->
     <LinearLayout
         android:layout_width="match_parent"
