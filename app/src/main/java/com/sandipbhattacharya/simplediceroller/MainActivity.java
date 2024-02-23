@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
-                finish();  // Close the current activity
+                //Close the current activity
+                finish();
             }
         });
 
@@ -34,9 +35,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, DiceActivity.class);
                 startActivity(intent);
-                finish();  // Close the current activity
+                //Close the current activity
+                finish();
             }
         });
-    }
 
+        buttonCreateAccount.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, SensorActivity.class);
+            startActivity(intent);
+        });
+    }
 }
