@@ -22,6 +22,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".DiceActivity" />
         <activity android:name=".SensorActivity"/>
+        <activity android:name=".CreateAccountActivity"/>
     </application>
 
 </manifest>

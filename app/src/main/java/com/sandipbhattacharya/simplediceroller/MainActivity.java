@@ -9,16 +9,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
+    private Button buttonLogin;
+    private Button buttonQuickPlay;
+    private Button buttonCreateAccount;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button buttonLogin = findViewById(R.id.buttonLogin);
+        buttonLogin = findViewById(R.id.buttonLogin);
         buttonLogin.setBackgroundColor(Color.parseColor("#010b13"));
-        Button buttonCreateAccount = findViewById(R.id.buttonCreateAccount);
-        buttonCreateAccount.setBackgroundColor(Color.parseColor("#010b13"));
-        Button buttonQuickPlay = findViewById(R.id.buttonQuickPlay);
+
+        buttonQuickPlay = findViewById(R.id.buttonQuickPlay);
         buttonQuickPlay.setBackgroundColor(Color.parseColor("#010b13"));
+
+        buttonCreateAccount = findViewById(R.id.buttonCreateAccount);
+        buttonCreateAccount.setBackgroundColor(Color.parseColor("#010b13"));
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,9 +46,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonCreateAccount.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, SensorActivity.class);
-            startActivity(intent);
+        buttonCreateAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent( MainActivity.this, CreateAccountActivity.class);
+                startActivity(intent);
+                finish();
+            }
         });
     }
 }
